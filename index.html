@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy – SiflexApp</title>
+  <meta name="description" content="Privacy Policy for SiflexApp. Bilingual Vietnamese & English.">
+  <meta property="og:title" content="Privacy Policy – SiflexApp">
+  <meta property="og:description" content="Privacy Policy for SiflexApp.">
+  <meta property="og:type" content="website">
+  <style>
+    :root {
+      --fg: #1f2937; --muted:#6b7280; --bg:#ffffff; --card:#f9fafb; --accent:#2563eb; --border:#e5e7eb;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin:0; padding:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; color:var(--fg); background:var(--bg);}
+    .container { max-width: 900px; margin: 0 auto; padding: 24px; }
+    .card { background: var(--card); border:1px solid var(--border); border-radius: 16px; padding: 24px; }
+    h1 { margin: 0 0 8px 0; font-size: 1.8rem; }
+    .meta { color: var(--muted); margin-bottom: 16px; }
+    .langswitch { display:flex; gap:8px; margin: 12px 0 20px; }
+    .btn { border:1px solid var(--border); background:white; padding:8px 12px; border-radius: 999px; cursor:pointer; font-weight:600; }
+    .btn.active { border-color: var(--accent); color: var(--accent); }
+    h2 { margin-top: 28px; font-size: 1.25rem; }
+    ul { padding-left: 20px; }
+    .note { padding: 12px; border-left: 4px solid var(--accent); background: #eef2ff; margin: 12px 0; border-radius: 6px; }
+    .muted { color: var(--muted); }
+    .foot { margin-top: 28px; padding-top: 16px; border-top:1px dashed var(--border); font-size: 0.95rem; color: var(--muted);}
+    table { width:100%; border-collapse: collapse; margin: 12px 0; }
+    th, td { text-align:left; border-bottom:1px solid var(--border); padding:8px 6px; vertical-align: top;}
+    code { background:#f3f4f6; padding:2px 6px; border-radius:6px; }
+  </style>
+  <script>
+    function setLang(lang) {
+      document.getElementById('vi').style.display = (lang==='vi') ? 'block' : 'none';
+      document.getElementById('en').style.display = (lang==='en') ? 'block' : 'none';
+      var btnVi = document.getElementById('btn-vi');
+      var btnEn = document.getElementById('btn-en');
+      btnVi.classList.toggle('active', lang==='vi');
+      btnEn.classList.toggle('active', lang==='en');
+      try { localStorage.setItem('pp_lang', lang); } catch(e){}
+    }
+    document.addEventListener('DOMContentLoaded', function(){
+      var saved = null;
+      try { saved = localStorage.getItem('pp_lang'); } catch(e){}
+      setLang(saved === 'en' ? 'en' : 'vi');
+    });
+  </script>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>Privacy Policy – <span class="muted">SiflexApp</span></h1>
+      <div class="meta">Data Controller: <strong>SI FLEX VIETNAM Co., Ltd. / CÔNG TY TNHH SI FLEX VIỆT NAM</strong> – Quang Chau Industrial Park, Viet Yen District, Bac Giang Province, Vietnam – Vietnam • Last updated: <strong>2025-09-16</strong></div>
+      <div class="langswitch">
+        <button id="btn-vi" class="btn" onclick="setLang('vi')">Tiếng Việt</button>
+        <button id="btn-en" class="btn" onclick="setLang('en')">English</button>
+      </div>
+
+      <!-- Vietnamese -->
+      <div id="vi">
+        <div class="note"><strong>Lưu ý:</strong> Trang này là mẫu. Đã điền thông tin pháp lý cơ bản theo bạn cung cấp. Nội dung mang tính tham khảo, không phải tư vấn pháp lý.</div>
+
+        <h2>1) Phạm vi áp dụng</h2>
+        <p>Chính sách này mô tả cách <strong>CÔNG TY TNHH SI FLEX VIỆT NAM</strong> thu thập, sử dụng, lưu trữ và chia sẻ dữ liệu cá nhân khi bạn dùng <strong>SiflexApp</strong> trên iOS.</p>
+
+        <h2>2) Dữ liệu chúng tôi thu thập</h2>
+        <table>
+          <tr><th>Danh mục</th><th>Ví dụ</th></tr>
+          <tr><td>Do bạn cung cấp</td><td>Họ tên, email, số điện thoại; thông tin đăng nhập (lưu dạng hash nếu áp dụng); [Mã nhân viên nếu app nội bộ]; nội dung phản hồi/tệp bạn gửi.</td></tr>
+          <tr><td>Tự động thu thập</td><td>IDFV, địa chỉ IP (vị trí xấp xỉ), ngôn ngữ/múi giờ, số liệu sử dụng, nhật ký chẩn đoán/sự cố.</td></tr>
+          <tr><td>Quyền hệ thống</td><td>Camera, Ảnh/Thư viện, **Face ID/Biometrics (xử lý trên thiết bị)**, Thông báo đẩy (qua **Expo/FCM**), Vị trí (nếu có). Chỉ yêu cầu khi cần cho tính năng.</td></tr>
+          <tr><td>Theo dõi</td><td>Không thực hiện theo dõi xuyên ứng dụng cho quảng cáo; không bán dữ liệu cá nhân theo nghĩa CCPA.</td></tr>
+        </table>
+
+        <h2>3) Mục đích xử lý</h2>
+        <ul>
+          <li>Cung cấp/vận hành tính năng của ứng dụng; xác thực, đồng bộ.</li>
+          <li>Gửi thông báo đẩy về hoạt động/tin mới (qua Expo/FCM).</li>
+          <li>Phân tích hiệu năng, sửa lỗi; bảo mật & chống gian lận.</li>
+          <li>Tuân thủ pháp luật & yêu cầu cơ quan có thẩm quyền.</li>
+        </ul>
+
+        <h2>4) Chia sẻ dữ liệu</h2>
+        <p>Chúng tôi chỉ chia sẻ khi cần cho các mục đích ở Mục 3 với nhà cung cấp dịch vụ: hạ tầng/hosting (ví dụ AWS/Azure), **thông báo đẩy (Expo Push Service, Firebase Cloud Messaging)**. Có thể chia sẻ khi có yêu cầu hợp lệ của cơ quan nhà nước.</p>
+
+        <h2>5) Lưu trữ & thời hạn</h2>
+        <ul>
+          <li>Tài khoản & hồ sơ: duy trì trong thời gian sử dụng; **ngắt sau 15 ngày** kể từ khi nhân viên nghỉ việc.</li>
+          <li>Nhật ký truy cập/chẩn đoán: **12 tháng**.</li>
+          <li>Push token: đến khi bạn gỡ cài đặt, tắt thông báo, hoặc yêu cầu xóa.</li>
+          <li>**Dữ liệu Face ID/biometrics:** xử lý và lưu **trên thiết bị (on‑device)**; **lưu giữ vĩnh viễn** trừ khi bạn gỡ ứng dụng hoặc xóa dữ liệu trong ứng dụng.</li>
+        </ul>
+
+        <h2>6) Bảo mật</h2>
+        <p>Truyền dữ liệu bằng TLS; áp dụng kiểm soát truy cập tối thiểu cần thiết; có thể mã hóa dữ liệu khi lưu trữ. Không có phương thức nào an toàn tuyệt đối.</p>
+
+        <h2>7) Trẻ em</h2>
+        <p>Ứng dụng không dành cho trẻ em dưới 13/16 tuổi (tùy luật áp dụng) và không cố ý thu thập dữ liệu từ trẻ em.</p>
+
+        <h2>8) Chuyển dữ liệu quốc tế</h2>
+        <p>Khi chuyển dữ liệu ra ngoài quốc gia của bạn, chúng tôi áp dụng biện pháp bảo vệ phù hợp (ví dụ SCCs theo GDPR) và đánh giá tác động khi cần.</p>
+
+        <h2>9) Quyền của bạn</h2>
+        <p>Tùy luật áp dụng (VD: Nghị định 13/2023/ND‑CP, GDPR, CCPA), bạn có quyền truy cập, sửa, xóa, hạn chế, phản đối, rút lại đồng ý, nhận bản sao (portability), và khiếu nại. Liên hệ Mục 11 để thực hiện.</p>
+
+        <h2>10) Thay đổi chính sách</h2>
+        <p>Chúng tôi có thể cập nhật chính sách. Khi có thay đổi quan trọng, sẽ thông báo trong ứng dụng hoặc qua email.</p>
+
+        <h2>11) Liên hệ</h2>
+        <p>Email: <a href="mailto:ndhau.dev@gmail.com">ndhau.dev@gmail.com</a> • Địa chỉ: Khu Công Nghiệp Quang Châu (KCN Quang Châu), Huyện Việt Yên, Tỉnh Bắc Giang, Việt Nam • Quốc gia: Việt Nam</p>
+      </div>
+
+      <!-- English -->
+      <div id="en" style="display:none">
+        <div class="note"><strong>Note:</strong> Filled with your provided legal details. This is not legal advice.</div>
+
+        <h2>1) Scope</h2>
+        <p>This Policy explains how <strong>SI FLEX VIETNAM Co., Ltd. / CÔNG TY TNHH SI FLEX VIỆT NAM</strong> collects, uses, stores, and shares personal data when you use <strong>SiflexApp</strong> on iOS.</p>
+
+        <h2>2) Data We Collect</h2>
+        <table>
+          <tr><th>Category</th><th>Examples</th></tr>
+          <tr><td>Provided by you</td><td>Name, email, phone; login credentials (stored as hash if applicable); [employee ID for internal apps]; feedback/content you submit.</td></tr>
+          <tr><td>Collected automatically</td><td>IDFV, IP address (approx. location), language/timezone, usage analytics, diagnostics/crash logs.</td></tr>
+          <tr><td>Device permissions</td><td>Camera, Photos, **Face ID/Biometrics (processed on‑device)**, Push Notifications (via **Expo/FCM**), Location (if used). Requested only when required for features.</td></tr>
+          <tr><td>Tracking</td><td>No cross-app tracking for advertising; we do not sell personal data (as defined by CCPA).</td></tr>
+        </table>
+
+        <h2>3) Purposes</h2>
+        <ul>
+          <li>Provide/operate app features; authentication and sync.</li>
+          <li>Send push notifications about activity/updates (via Expo/FCM).</li>
+          <li>Analytics/performance, bug fixing; security & fraud prevention.</li>
+          <li>Legal compliance and lawful requests.</li>
+        </ul>
+
+        <h2>4) Sharing</h2>
+        <p>We share data only as necessary for the purposes above with service providers: infrastructure/hosting (e.g., AWS/Azure), **push notifications (Expo Push Service, Firebase Cloud Messaging)**. We may disclose data to competent authorities when legally required.</p>
+
+        <h2>5) Retention</h2>
+        <ul>
+          <li>Account/profile: retained during active use; **disconnected 15 days after employment termination**.</li>
+          <li>Access/diagnostic logs: **12 months**.</li>
+          <li>Push token: until you uninstall, disable notifications, or request deletion.</li>
+          <li>**Face ID/biometric data:** processed and stored **on‑device**; **kept indefinitely** unless you uninstall the app or erase data within the app.</li>
+        </ul>
+
+        <h2>6) Security</h2>
+        <p>Data is transmitted over TLS; access is restricted on a need-to-know basis; data at rest may be encrypted. No method is 100% secure.</p>
+
+        <h2>7) Children</h2>
+        <p>The App is not intended for children under 13/16 (depending on applicable law) and we do not knowingly collect data from children.</p>
+
+        <h2>8) International Transfers</h2>
+        <p>When transferring data outside your country, we implement appropriate safeguards (e.g., GDPR SCCs) and conduct transfer impact assessments as needed.</p>
+
+        <h2>9) Your Rights</h2>
+        <p>Subject to applicable laws (e.g., Vietnam PDPL Decree 13/2023, GDPR, CCPA), you may request access, correction, deletion, restriction, objection, consent withdrawal, data portability, and lodge complaints. See Section 11 to exercise these rights.</p>
+
+        <h2>10) Changes</h2>
+        <p>We may update this Policy. Material changes will be notified in-App or via email.</p>
+
+        <h2>11) Contact</h2>
+        <p>Email: <a href="mailto:ndhau.dev@gmail.com">ndhau.dev@gmail.com</a> • Address: Quang Chau Industrial Park, Viet Yen District, Bac Giang Province, Vietnam • Country: Vietnam</p>
+      </div>
+
+      <div class="foot">© 2025 SI FLEX VIETNAM Co., Ltd.. All rights reserved.</div>
+    </div>
+  </div>
+</body>
+</html>
