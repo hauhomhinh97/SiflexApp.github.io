@@ -29,6 +29,7 @@
     table { width:100%; border-collapse: collapse; margin: 12px 0; }
     th, td { text-align:left; border-bottom:1px solid var(--border); padding:8px 6px; vertical-align: top;}
     code { background:#f3f4f6; padding:2px 6px; border-radius:6px; }
+    .tag { display:inline-block; border:1px solid var(--border); border-radius:999px; padding:2px 8px; margin:2px 4px; font-size:12px; }
   </style>
   <script>
     function setLang(lang) {
@@ -59,7 +60,7 @@
 
       <!-- Vietnamese -->
       <div id="vi">
-        <div class="note"><strong>Lưu ý:</strong> Trang này là mẫu. Đã điền thông tin pháp lý cơ bản theo bạn cung cấp. Nội dung mang tính tham khảo, không phải tư vấn pháp lý.</div>
+        <div class="note"><strong>Ghi chú:</strong> Ứng dụng <strong>nội bộ dành cho nhân viên</strong> để tra cứu <strong>bảng lương</strong> và nhận <strong>thông báo nội bộ</strong>. Dữ liệu được dùng cho chức năng ứng dụng & bảo mật, không dùng cho quảng cáo.</div>
 
         <h2>1) Phạm vi áp dụng</h2>
         <p>Chính sách này mô tả cách <strong>CÔNG TY TNHH SI FLEX VIỆT NAM</strong> thu thập, sử dụng, lưu trữ và chia sẻ dữ liệu cá nhân khi bạn dùng <strong>SiflexApp</strong> trên iOS.</p>
@@ -67,33 +68,34 @@
         <h2>2) Dữ liệu chúng tôi thu thập</h2>
         <table>
           <tr><th>Danh mục</th><th>Ví dụ</th></tr>
-          <tr><td>Do bạn cung cấp</td><td>Họ tên, email, số điện thoại; thông tin đăng nhập (lưu dạng hash nếu áp dụng); Mã nhân viên; nội dung phản hồi/tệp bạn gửi.</td></tr>
+          <tr><td>Do bạn cung cấp</td><td>Họ tên, email, số điện thoại (nếu có); thông tin đăng nhập (lưu dạng hash nếu áp dụng); <strong>Mã nhân viên</strong>; nội dung phản hồi/tệp bạn gửi.</td></tr>
           <tr><td>Tự động thu thập</td><td>IDFV, địa chỉ IP (vị trí xấp xỉ), ngôn ngữ/múi giờ, số liệu sử dụng, nhật ký chẩn đoán/sự cố.</td></tr>
-          <tr><td>Quyền hệ thống</td><td>Camera, Ảnh/Thư viện, **Face ID/Biometrics (xử lý trên thiết bị)**, Thông báo đẩy (qua **Expo/FCM**), Vị trí (nếu có). Chỉ yêu cầu khi cần cho tính năng.</td></tr>
-          <tr><td>Theo dõi</td><td>Không thực hiện theo dõi xuyên ứng dụng cho quảng cáo; không bán dữ liệu cá nhân theo nghĩa CCPA.</td></tr>
+          <tr><td>Quyền hệ thống</td><td>Camera, Ảnh/Thư viện, <strong>Face ID/biometrics (xử lý & lưu trên thiết bị)</strong>, Thông báo đẩy (qua <strong>Expo/FCM</strong>), Vị trí (nếu có).</td></tr>
+          <tr><td>Dữ liệu hiển thị</td><td><strong>Thông tin bảng lương</strong> (thu nhập, phụ cấp, khấu trừ...) được đồng bộ từ hệ thống nội bộ công ty và hiển thị cho đúng nhân viên.</td></tr>
+          <tr><td>Theo dõi</td><td>Không theo dõi xuyên ứng dụng cho quảng cáo; không bán dữ liệu cá nhân.</td></tr>
         </table>
 
         <h2>3) Mục đích xử lý</h2>
         <ul>
-          <li>Cung cấp/vận hành tính năng của ứng dụng; xác thực, đồng bộ.</li>
-          <li>Gửi thông báo đẩy về hoạt động/tin mới (qua Expo/FCM).</li>
-          <li>Phân tích hiệu năng, sửa lỗi; bảo mật & chống gian lận.</li>
+          <li>Cung cấp/vận hành tính năng: tra cứu lương theo tài khoản nhân viên.</li>
+          <li>Gửi thông báo nội bộ (qua Expo/FCM).</li>
+          <li>Phân tích hiệu năng & sửa lỗi; bảo mật & chống gian lận.</li>
           <li>Tuân thủ pháp luật & yêu cầu cơ quan có thẩm quyền.</li>
         </ul>
 
         <h2>4) Chia sẻ dữ liệu</h2>
-        <p>Chúng tôi chỉ chia sẻ khi cần cho các mục đích ở Mục 3 với nhà cung cấp dịch vụ: hạ tầng/hosting (ví dụ AWS/Azure), **thông báo đẩy (Expo Push Service, Firebase Cloud Messaging)**. Có thể chia sẻ khi có yêu cầu hợp lệ của cơ quan nhà nước.</p>
+        <p>Chia sẻ tối thiểu với nhà cung cấp dịch vụ: hạ tầng/hosting (VD AWS/Azure), <strong>thông báo đẩy (Expo Push Service, Firebase Cloud Messaging)</strong>. Có thể chia sẻ khi có yêu cầu hợp lệ của cơ quan nhà nước.</p>
 
         <h2>5) Lưu trữ & thời hạn</h2>
         <ul>
-          <li>Tài khoản & hồ sơ: duy trì trong thời gian sử dụng; **ngắt sau 15 ngày** kể từ khi nhân viên nghỉ việc.</li>
-          <li>Nhật ký truy cập/chẩn đoán: **12 tháng**.</li>
-          <li>Push token: đến khi bạn gỡ cài đặt, tắt thông báo, hoặc yêu cầu xóa.</li>
-          <li>**Dữ liệu Face ID/biometrics:** xử lý và lưu **trên thiết bị (on‑device)**; **lưu giữ vĩnh viễn** trừ khi bạn gỡ ứng dụng hoặc xóa dữ liệu trong ứng dụng.</li>
+          <li>Tài khoản & hồ sơ: duy trì trong thời gian sử dụng; <strong>ngắt sau 15 ngày</strong> kể từ khi nhân viên nghỉ việc.</li>
+          <li>Nhật ký truy cập/chẩn đoán: <strong>12 tháng</strong>.</li>
+          <li>Push token: đến khi gỡ cài đặt, tắt thông báo, hoặc bạn yêu cầu xóa.</li>
+          <li><strong>Dữ liệu Face ID/biometrics:</strong> xử lý & lưu <strong>trên thiết bị</strong>; <strong>lưu giữ vĩnh viễn</strong> trừ khi bạn gỡ ứng dụng hoặc xóa dữ liệu trong ứng dụng.</li>
         </ul>
 
         <h2>6) Bảo mật</h2>
-        <p>Truyền dữ liệu bằng TLS; áp dụng kiểm soát truy cập tối thiểu cần thiết; có thể mã hóa dữ liệu khi lưu trữ. Không có phương thức nào an toàn tuyệt đối.</p>
+        <p>Truyền dữ liệu bằng TLS; kiểm soát truy cập tối thiểu cần thiết; có thể mã hóa khi lưu trữ. Không có phương thức nào an toàn tuyệt đối.</p>
 
         <h2>7) Trẻ em</h2>
         <p>Ứng dụng không dành cho trẻ em dưới 13/16 tuổi (tùy luật áp dụng) và không cố ý thu thập dữ liệu từ trẻ em.</p>
@@ -109,11 +111,25 @@
 
         <h2>11) Liên hệ</h2>
         <p>Email: <a href="mailto:ndhau.dev@gmail.com">ndhau.dev@gmail.com</a> • Địa chỉ: Khu Công Nghiệp Quang Châu (KCN Quang Châu), Huyện Việt Yên, Tỉnh Bắc Giang, Việt Nam • Quốc gia: Việt Nam</p>
+
+        <h2>12) Nhãn quyền riêng tư cho App Store (Nutrition Labels)</h2>
+        <p>Dưới đây là mô tả dữ liệu theo phân loại của Apple để bạn tham khảo khi khai báo trong App Store Connect.</p>
+        <table>
+          <tr><th>Loại dữ liệu</th><th>Trạng thái</th><th>Mục đích</th></tr>
+          <tr><td><strong>Contact Info</strong> (Email, Phone)</td><td>Linked to You</td><td><span class="tag">App Functionality</span> <span class="tag">Support</span></td></tr>
+          <tr><td><strong>Identifiers</strong> (Employee ID, User ID, IDFV)</td><td>Linked to You</td><td><span class="tag">App Functionality</span> <span class="tag">Security</span> <span class="tag">Analytics</span></td></tr>
+          <tr><td><strong>Financial Info</strong> (Payroll Details)</td><td>Linked to You</td><td><span class="tag">App Functionality</span></td></tr>
+          <tr><td><strong>Usage Data</strong> (Product Interaction)</td><td>Linked to You (tối thiểu)</td><td><span class="tag">Analytics</span> <span class="tag">Diagnostics</span></td></tr>
+          <tr><td><strong>Diagnostics</strong> (Crash Data)</td><td>Not Linked / Linked (tùy cấu hình)</td><td><span class="tag">Diagnostics</span></td></tr>
+          <tr><td><strong>Sensitive Info — Biometrics</strong> (Face data)</td><td><u>Not Collected by Developer</u> (lưu <em>on‑device</em>)</td><td><span class="tag">Authentication</span> <span class="tag">Security</span></td></tr>
+          <tr><td><strong>Tracking Across Apps/Websites</strong></td><td><u>Không</u></td><td>—</td></tr>
+        </table>
+        <p class="muted">Lưu ý: Nếu sau này bạn bật thêm SDK phân tích/marketing hoặc gửi dữ liệu sinh trắc học lên máy chủ, hãy cập nhật lại khai báo trong App Store Connect và tại trang này.</p>
       </div>
 
       <!-- English -->
       <div id="en" style="display:none">
-        <div class="note"><strong>Note:</strong> Filled with your provided legal details. This is not legal advice.</div>
+        <div class="note"><strong>Note:</strong> This is an internal app for employees to <strong>view payroll</strong> and receive <strong>internal notifications</strong>. Data is used for app functionality and security, not for advertising.</div>
 
         <h2>1) Scope</h2>
         <p>This Policy explains how <strong>SI FLEX VIETNAM Co., Ltd. / CÔNG TY TNHH SI FLEX VIỆT NAM</strong> collects, uses, stores, and shares personal data when you use <strong>SiflexApp</strong> on iOS.</p>
@@ -121,29 +137,30 @@
         <h2>2) Data We Collect</h2>
         <table>
           <tr><th>Category</th><th>Examples</th></tr>
-          <tr><td>Provided by you</td><td>Name, email, phone; login credentials (stored as hash if applicable); employee ID; feedback/content you submit.</td></tr>
+          <tr><td>Provided by you</td><td>Name, email, phone (if any); login credentials (hashed if applicable); <strong>Employee ID</strong>; feedback/content you submit.</td></tr>
           <tr><td>Collected automatically</td><td>IDFV, IP address (approx. location), language/timezone, usage analytics, diagnostics/crash logs.</td></tr>
-          <tr><td>Device permissions</td><td>Camera, Photos, **Face ID/Biometrics (processed on‑device)**, Push Notifications (via **Expo/FCM**), Location (if used). Requested only when required for features.</td></tr>
-          <tr><td>Tracking</td><td>No cross-app tracking for advertising; we do not sell personal data (as defined by CCPA).</td></tr>
+          <tr><td>Device permissions</td><td>Camera, Photos, <strong>Face ID/biometrics (processed & stored on‑device)</strong>, Push Notifications (via <strong>Expo/FCM</strong>), Location (if used).</td></tr>
+          <tr><td>Displayed data</td><td><strong>Payroll information</strong> (compensation, allowances, deductions, etc.) synced from corporate systems and shown only to the respective employee.</td></tr>
+          <tr><td>Tracking</td><td>No cross‑app tracking; we do not sell personal data.</td></tr>
         </table>
 
         <h2>3) Purposes</h2>
         <ul>
-          <li>Provide/operate app features; authentication and sync.</li>
-          <li>Send push notifications about activity/updates (via Expo/FCM).</li>
-          <li>Analytics/performance, bug fixing; security & fraud prevention.</li>
+          <li>Provide/operate features: payroll lookup per employee account.</li>
+          <li>Send internal notifications (via Expo/FCM).</li>
+          <li>Analytics/performance & bug fixing; security & fraud prevention.</li>
           <li>Legal compliance and lawful requests.</li>
         </ul>
 
         <h2>4) Sharing</h2>
-        <p>We share data only as necessary for the purposes above with service providers: infrastructure/hosting (e.g., AWS/Azure), **push notifications (Expo Push Service, Firebase Cloud Messaging)**. We may disclose data to competent authorities when legally required.</p>
+        <p>Minimal sharing with service providers: infrastructure/hosting (e.g., AWS/Azure), <strong>push notifications (Expo Push Service, Firebase Cloud Messaging)</strong>. We may disclose data to competent authorities when legally required.</p>
 
         <h2>5) Retention</h2>
         <ul>
-          <li>Account/profile: retained during active use; **disconnected 15 days after employment termination**.</li>
-          <li>Access/diagnostic logs: **12 months**.</li>
+          <li>Account/profile: retained during active use; <strong>disconnected 15 days</strong> after employment termination.</li>
+          <li>Access/diagnostic logs: <strong>12 months</strong>.</li>
           <li>Push token: until you uninstall, disable notifications, or request deletion.</li>
-          <li>**Face ID/biometric data:** processed and stored **on‑device**; **kept indefinitely** unless you uninstall the app or erase data within the app.</li>
+          <li><strong>Face ID/biometric data:</strong> processed & stored <strong>on‑device</strong>; <strong>kept indefinitely</strong> unless you uninstall or erase data within the app.</li>
         </ul>
 
         <h2>6) Security</h2>
@@ -159,10 +176,24 @@
         <p>Subject to applicable laws (e.g., Vietnam PDPL Decree 13/2023, GDPR, CCPA), you may request access, correction, deletion, restriction, objection, consent withdrawal, data portability, and lodge complaints. See Section 11 to exercise these rights.</p>
 
         <h2>10) Changes</h2>
-        <p>We may update this Policy. Material changes will be notified in-App or via email.</p>
+        <p>We may update this Policy. Material changes will be notified in‑App or via email.</p>
 
         <h2>11) Contact</h2>
         <p>Email: <a href="mailto:ndhau.dev@gmail.com">ndhau.dev@gmail.com</a> • Address: Quang Chau Industrial Park, Viet Yen District, Bac Giang Province, Vietnam • Country: Vietnam</p>
+
+        <h2>12) App Store Privacy Nutrition Labels</h2>
+        <p>The following summarizes data categories for App Store Connect disclosure.</p>
+        <table>
+          <tr><th>Data Type</th><th>Status</th><th>Purpose</th></tr>
+          <tr><td><strong>Contact Info</strong> (Email, Phone)</td><td>Linked to You</td><td><span class="tag">App Functionality</span> <span class="tag">Support</span></td></tr>
+          <tr><td><strong>Identifiers</strong> (Employee ID, User ID, IDFV)</td><td>Linked to You</td><td><span class="tag">App Functionality</span> <span class="tag">Security</span> <span class="tag">Analytics</span></td></tr>
+          <tr><td><strong>Financial Info</strong> (Payroll Details)</td><td>Linked to You</td><td><span class="tag">App Functionality</span></td></tr>
+          <tr><td><strong>Usage Data</strong> (Product Interaction)</td><td>Linked to You (minimal)</td><td><span class="tag">Analytics</span> <span class="tag">Diagnostics</span></td></tr>
+          <tr><td><strong>Diagnostics</strong> (Crash Data)</td><td>Not Linked / Linked (config‑dependent)</td><td><span class="tag">Diagnostics</span></td></tr>
+          <tr><td><strong>Sensitive Info — Biometrics</strong> (Face data)</td><td><u>Not Collected by Developer</u> (stored <em>on‑device</em>)</td><td><span class="tag">Authentication</span> <span class="tag">Security</span></td></tr>
+          <tr><td><strong>Tracking Across Apps/Websites</strong></td><td><u>No</u></td><td>—</td></tr>
+        </table>
+        <p class="muted">Note: If you later enable marketing analytics SDKs or upload biometric data to servers, update App Store Connect and this page.</p>
       </div>
 
       <div class="foot">© 2025 SI FLEX VIETNAM Co., Ltd.. All rights reserved.</div>
